@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on win32)" generated="20221201 16:13:15.329" rpa="false" schemaversion="3">
+<suite id="s1" name="RFZadani" source="c:\Users\HellFmanZ\Desktop\python\Zadani Leuze final\RFZadani.robot">
+<test id="s1-t1" name="Figure can vary check" line="47">
+<kw name="otevri targ">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${wTarget}</arg>
+<arg>${brwsr}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221201 16:13:15.500" level="INFO">Opening browser 'Edge' to base url 'https://www.leuze.com/en-int/bcl-300i-sm-102-d-h/50116218?p=1'.</msg>
+<status status="PASS" starttime="20221201 16:13:15.500" endtime="20221201 16:13:19.559"/>
+</kw>
+<status status="PASS" starttime="20221201 16:13:15.499" endtime="20221201 16:13:19.559"/>
+</kw>
+<kw name="Page Should Contain Image" library="SeleniumLibrary">
+<arg>xpath: //*[@id="tns3-item0"]/div/figure/img</arg>
+<doc>Verifies image identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20221201 16:13:19.728" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221201 16:13:19.729" level="FAIL">Page should have contained image 'xpath: //*[@id="tns3-item0"]/div/figure/img' but did not.</msg>
+<status status="FAIL" starttime="20221201 16:13:19.559" endtime="20221201 16:13:19.749"/>
+</kw>
+<status status="FAIL" starttime="20221201 16:13:15.498" endtime="20221201 16:13:19.750">Page should have contained image 'xpath: //*[@id="tns3-item0"]/div/figure/img' but did not.</status>
+</test>
+<doc>Testing the content of the official product page of Leuze electronics</doc>
+<status status="FAIL" starttime="20221201 16:13:15.332" endtime="20221201 16:13:19.751"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="RFZadani">RFZadani</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on win32)" generated="20221124 17:36:47.164" rpa="false" schemaversion="3">
+<suite id="s1" name="Rfzadani" source="c:\Users\HellFmanZ\Desktop\python\rfzadani.robot">
+<test id="s1-t1" name="Open web check" line="41">
+<kw name="otevri base">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${wBase}</arg>
+<arg>${brwsr}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221124 17:36:47.327" level="INFO">Opening browser 'Edge' to base url 'https://www.leuze.com/'.</msg>
+<status status="PASS" starttime="20221124 17:36:47.327" endtime="20221124 17:36:49.678"/>
+</kw>
+<status status="PASS" starttime="20221124 17:36:47.326" endtime="20221124 17:36:49.678"/>
+</kw>
+<status status="PASS" starttime="20221124 17:36:47.326" endtime="20221124 17:36:49.679"/>
+</test>
+<test id="s1-t2" name="Search for bcl300" line="45">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath: //*[@id="searchCollapse"]/div/form/div[1]/input</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221124 17:36:49.680" endtime="20221124 17:36:49.689"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath: //*[@id="searchCollapse"]/div/form/div[1]/input</arg>
+<arg>${prdctname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221124 17:36:49.690" level="INFO">Typing text 'BCL 300i SM 102 D H' into text field 'xpath: //*[@id="searchCollapse"]/div/form/div[1]/input'.</msg>
+<status status="PASS" starttime="20221124 17:36:49.690" endtime="20221124 17:36:49.740"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath: //*[@id="searchCollapse"]/div/form/div[1]/div/button</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221124 17:36:49.740" endtime="20221124 17:36:49.745"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath: //*[@id="searchCollapse"]/div/form/div[1]/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221124 17:36:49.746" level="INFO">Clicking button 'xpath: //*[@id="searchCollapse"]/div/form/div[1]/div/button'.</msg>
+<status status="PASS" starttime="20221124 17:36:49.745" endtime="20221124 17:36:50.786"/>
+</kw>
+<status status="PASS" starttime="20221124 17:36:49.680" endtime="20221124 17:36:50.786"/>
+</test>
+<test id="s1-t3" name="Product selection" line="50">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:/html/body/main/div[2]/div/div/div/div[2]/div/div/div[2]/div[1]/div/div/div[3]/div/div[1]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221124 17:36:50.788" endtime="20221124 17:36:50.812"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/main/div[2]/div/div/div/div[2]/div/div/div[2]/div[1]/div/div/div[3]/div/div[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221124 17:36:50.812" level="INFO">Clicking element 'xpath:/html/body/main/div[2]/div/div/div/div[2]/div/div/div[2]/div[1]/div/div/div[3]/div/div[1]/a'.</msg>
+<status status="PASS" starttime="20221124 17:36:50.812" endtime="20221124 17:36:51.313"/>
+</kw>
+<status status="PASS" starttime="20221124 17:36:50.787" endtime="20221124 17:36:51.313"/>
+</test>
+<test id="s1-t4" name="Figure can vary check" line="54">
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath: /html/body/main/div[2]/div/div/div[1]/div/div[1]/div/div/div[1]/div/div[1]/div[2]/div/div/div[3]/div/figure/figcaption</arg>
+<arg>Figure can vary</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221124 17:36:51.326" level="INFO">Element 'xpath: /html/body/main/div[2]/div/div/div[1]/div/div[1]/div/div/div[1]/div/div[1]/div[2]/div/div/div[3]/div/figure/figcaption' contains text 'Figure can vary'.</msg>
+<status status="PASS" starttime="20221124 17:36:51.314" endtime="20221124 17:36:51.327"/>
+</kw>
+<status status="PASS" starttime="20221124 17:36:51.313" endtime="20221124 17:36:51.327"/>
+</test>
+<test id="s1-t5" name="Icon Pressence" line="59">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>class:single-selector-icon</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221124 17:36:51.328" endtime="20221124 17:36:51.340"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>class:single-selector-icon</arg>
+<arg>Page does not contain 6 icons</arg>
+<arg>limit=6</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221124 17:36:51.343" level="INFO">Current page contains 6 element(s).</msg>
+<status status="PASS" starttime="20221124 17:36:51.340" endtime="20221124 17:36:51.343"/>
+</kw>
+<status status="PASS" starttime="20221124 17:36:51.327" endtime="20221124 17:36:51.344"/>
+</test>
+<test id="s1-t6" name="Technical Features list" line="65">
+<kw name="Sleep" library="BuiltIn">
+<arg>0.3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221124 17:36:51.654" level="INFO">Slept 300 milliseconds</msg>
+<status status="PASS" starttime="20221124 17:36:51.345" endtime="20221124 17:36:51.654"/>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<arg>xpath://*[@id="technicalFeatures-tab"]</arg>
+<arg>class</arg>
+<arg>nav-link active product-detail-tab-navigation-link</arg>
+<arg>Element neni viditelny!</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<msg timestamp="20221124 17:36:51.667" level="INFO">Element 'xpath://*[@id="technicalFeatures-tab"]' attribute 'class' contains value 'nav-link active product-detail-tab-navigation-link'.</msg>
+<status status="PASS" starttime="20221124 17:36:51.655" endtime="20221124 17:36:51.667"/>
+</kw>
+<status status="PASS" starttime="20221124 17:36:51.344" endtime="20221124 17:36:51.668"/>
+</test>
+<test id="s1-t7" name="Time required to load page" line="70">
+<kw name="vypocet nacteni">
+<kw name="otevri targ">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${wTarget}</arg>
+<arg>${brwsr}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221124 17:36:51.669" level="INFO">Opening browser 'Edge' to base url 'https://www.leuze.com/en-int/bcl-300i-sm-102-d-h/50116218?p=1'.</msg>
+<status status="PASS" starttime="20221124 17:36:51.669" endtime="20221124 17:36:55.596"/>
+</kw>
+<status status="PASS" starttime="20221124 17:36:51.669" endtime="20221124 17:36:55.597"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${t1}</var>
+<arg>result_format=timestamp</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20221124 17:36:55.597" level="INFO">${t1} = 2022-11-24 17:36:55.597</msg>
+<status status="PASS" starttime="20221124 17:36:55.597" endtime="20221124 17:36:55.597"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:/html/body/main/div[2]/div/div/div[1]/div/div[2]/div[2]/img[6]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221124 17:36:55.597" endtime="20221124 17:36:55.616"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${t2}</var>
+<arg>result_format=timestamp</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20221124 17:36:55.616" level="INFO">${t2} = 2022-11-24 17:36:55.616</msg>
+<status status="PASS" starttime="20221124 17:36:55.616" endtime="20221124 17:36:55.616"/>
+</kw>
+<kw name="Subtract Date From Date" library="DateTime">
+<var>${time_delta}</var>
+<arg>${t2}</arg>
+<arg>${t1}</arg>
+<arg>verbose</arg>
+<doc>Subtracts date from another date and returns time between.</doc>
+<msg timestamp="20221124 17:36:55.618" level="INFO">${time_delta} = 19 milliseconds</msg>
+<status status="PASS" starttime="20221124 17:36:55.616" endtime="20221124 17:36:55.618"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\nCas nacteni je ${time_delta}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221124 17:36:55.619" endtime="20221124 17:36:55.619"/>
+</kw>
+<status status="PASS" starttime="20221124 17:36:51.669" endtime="20221124 17:36:55.619"/>
+</kw>
+<status status="PASS" starttime="20221124 17:36:51.668" endtime="20221124 17:36:55.619"/>
+</test>
+<doc>Testing the referenced requirements for the product page of bcl300i</doc>
+<status status="PASS" starttime="20221124 17:36:47.167" endtime="20221124 17:36:55.620"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="7" fail="0" skip="0" id="s1" name="Rfzadani">Rfzadani</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
